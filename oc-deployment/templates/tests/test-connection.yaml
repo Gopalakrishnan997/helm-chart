@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ .Values.service.name }}:{{ .Values.service.port }}']
+      args: ['ui-helm-app.20.127.63.130.nip.io']
   restartPolicy: Never

@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['172.30.118.50:8080']
+      args: ['{{ include "oc-deployment.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never

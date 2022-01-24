@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['ui-helm-app.20.127.63.130.nip.io']
+      args: ['172.30.118.50:8080']
   restartPolicy: Never

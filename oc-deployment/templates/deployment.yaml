@@ -1,11 +1,13 @@
 apiVersion: apps/v1
-ki: Deployment metadata:
+kind: Deployment 
+metadata:
   name: {{ .Release.Name }}
   labels:
     {{- include "oc-deployment.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
-  selector:matchLabels:
+  selector:
+    matchLabels:
       {{- include "oc-deployment.selectorLabels" . | nindent 6 }}
   template:
     metadata:

@@ -15,7 +15,13 @@ spec:
         {{- include "oc-deployment.selectorLabels" . | nindent 8 }}
     spec:
       containers:
-        - name: {{ .Values.containers.name }}
+        - env:
+            - name: DIRS_AUTH_AID
+              valueFrom:
+                secretKeyRef:
+                  key: aid
+                  name: secret
+          name: {{ .Values.containers.name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:

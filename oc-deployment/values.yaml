@@ -1,5 +1,5 @@
 replicaCount: 2
-
+name: {{ .Release.Name }}
 image:
   repository: us-docker.pkg.dev/google-samples/containers/gke/hello-app
   pullPolicy: IfNotPresent

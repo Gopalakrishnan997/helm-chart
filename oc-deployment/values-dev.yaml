@@ -8,7 +8,7 @@ image:
 service:
   type: ClusterIP
   port: 8080
-  name: ui
+  name: six
   targetport: 8080
   
 container:

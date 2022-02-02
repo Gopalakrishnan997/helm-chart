@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment 
 metadata:
-  name: {{ .Values.name | default domain-service }}
+  name: {{ .Values.name }}
   labels:
     {{- include "oc-deployment.labels" . | nindent 4 }}
 spec:

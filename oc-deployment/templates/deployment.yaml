@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - env:
-            - name: environ
+            - name: environment
               value: {{ .Values.env.environ | quote }}
             - name: DIRS_AUTH_AID
               valueFrom:

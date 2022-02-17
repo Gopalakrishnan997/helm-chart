@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('cleaning Jenkins workspace') {
       steps {
-        deleteDir()
+        git credentialsId: '13d412be-0d91-447a-b125-db7f5800cdb2', url: 'https://github.com/Gopalakrishnan997/helm-chart.git'
       }
     }
 
